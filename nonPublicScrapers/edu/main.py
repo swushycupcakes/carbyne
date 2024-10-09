@@ -38,3 +38,9 @@ if __name__ == "__main__":
         filter_and_save_csv(input_csv_file_path, output_csv_file_path)
         
     convert_csv_to_excel(output_csv_file_path, output_excel_file_path)
+
+if os.path.exists(output_excel_file_path):
+    print(f"File successfully created at {output_excel_file_path}")
+else:
+    print("File not found. Something went wrong.")
+    
